@@ -47,11 +47,42 @@
     "import/prefer-default-export": "off",
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
-    "no-use-before-define": "off"
+    "no-use-before-define": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": ["^@/"]
+      }
+    ]
   },
   "settings": {
     "react": {
       "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      },
+      "babel-module": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "alias": {
+          "@": "./",
+          "@/components": "./components",
+          "@/constants": "./constants",
+          "@/screens": "./screens",
+          "@/utils": "./utils"
+        }
+      }
     }
   }
 }
