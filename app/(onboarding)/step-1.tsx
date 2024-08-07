@@ -1,3 +1,4 @@
+import { t } from '@/lang';
 import { Text, View } from 'react-native';
 
 export default function Step1() {
@@ -9,7 +10,7 @@ export default function Step1() {
         alignItems: 'center',
       }}
     >
-      <Text>Step1.</Text>
+      <Text>{t('hello')}</Text>
     </View>
   );
 }
